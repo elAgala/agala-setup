@@ -7,6 +7,7 @@ install_nvim_dependencies() {
 
   # Install basic requirements
   sudo dnf install -y curl tar
+  sudo dnf install xclip
 
   # Install nvim config dependencies
   echo "Installing fzf, ripgrep, fd-find, and C compiler..."
