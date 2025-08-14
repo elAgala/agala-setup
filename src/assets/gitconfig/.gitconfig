@@ -1,0 +1,4 @@
+[include]
+    path = /home/YOUR_USER/.config/git/personal.gitconfig
+[includeIf "gitdir:/home/YOUR_USER/FOLDER/"]
+    path = /home/YOUR_USER/.config/git/FOLDER.gitconfig

@@ -51,7 +51,7 @@ end
 -- For example, changing the color scheme:
 config.color_scheme = "ayu"
 config.font = wezterm.font("JetBrains Mono")
-config.font_size = 16
+config.font_size = 12
 
 config.window_decorations = "RESIZE"
 

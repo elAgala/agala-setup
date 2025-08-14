@@ -1,0 +1,6 @@
+[user]
+    name = work_user
+    email = yourwork@email
+
+[credential]
+    helper = store --file /home/YOUR_USER/.config/git/.git-credentials-work

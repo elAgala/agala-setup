@@ -1,0 +1,6 @@
+[user]
+    name = GH_USER
+    email = yourgithub@email
+
+[credential]
+    helper = store --file /home/YOUR_USER/.config/git/.git-credentials-personal

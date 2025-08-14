@@ -112,13 +112,17 @@ alias zshconfig="nvim ~/.zshrc"
 alias nvimconfig="nvim ~/.config/nvim"
 alias sshconfig="nvim ~/.ssh/config"
 
-# Add Flutter to path
-export PATH="$HOME/.development/flutter/bin:$PATH"
+# Add .NET to path
+export PATH="$PATH:/opt/dotnet"
 
 # Add Nvim to path
-export PATH="$PATH:/opt/nvim-linux-x86_64/bin"
+export PATH="$PATH:/opt/nvim/bin"
+
+# Add LazyGit to path
+export PATH="$PATH:/opt/lazygit"
+
+# Add Flutter to path (under .development for rw access for the user)
+export PATH="$HOME/.development/flutter/bin:$PATH"
 
 # Chrome executable - Flutter
 export CHROME_EXECUTABLE="/usr/bin/brave-browser"
-
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
