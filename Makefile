@@ -1,10 +1,10 @@
 dev: clean build
 	echo "Running container and testing setup script..."
-	docker run -it --rm agala-setup /bin/bash -c "/fedora-setup/setup.sh"
+	docker run -it --rm agala-setup /bin/bash -c "/fedora-setup/setup.sh --development"
 
 dev-keep-alive: clean build
 	echo "Running setup script and keeping container alive for testing..."
-	docker run -it --name agala-setup-test agala-setup /bin/bash -c "/fedora-setup/setup.sh && echo 'Setup complete! Starting interactive shell...' && exec /bin/bash"
+	docker run -it --name agala-setup-test agala-setup /bin/bash -c "/fedora-setup/setup.sh --development && echo 'Setup complete! Starting interactive shell...' && exec /bin/bash"
 
 build:
 	echo "Building Fedora test container..."

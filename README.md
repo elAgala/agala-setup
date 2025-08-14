@@ -1,3 +1,5 @@
 ## Installation
 
-curl -s https://api.github.com/repos/elAgala/agala-setup/tarball | tar -xz -C /tmp && cd /tmp/elAgala-agala-setup-* && src/setup.sh
+```bash
+tmpdir="$(mktemp -d)" && trap 'rm -rf "$tmpdir"' EXIT && curl -fL https://github.com/elAgala/agala-setup/archive/refs/heads/master.tar.gz | tar -xz -C "$tmpdir" && bash "$tmpdir/agala-setup-master/src/setup.sh"
+```

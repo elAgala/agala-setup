@@ -29,17 +29,16 @@ install_zsh_plugins() {
     echo "zsh-history-substring-search already installed"
   fi
 
-
   echo "Oh My Zsh plugins installation complete!"
 }
 
 copy_custom_zshrc() {
   echo "Copying custom .zshrc configuration..."
-  
+
   local script_dir="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
   local custom_zshrc="$script_dir/../assets/.zshrc"
   local target_zshrc="$HOME/.zshrc"
-  
+
   if [ -f "$custom_zshrc" ]; then
     cp "$custom_zshrc" "$target_zshrc"
     echo "Custom .zshrc copied successfully"
@@ -58,21 +57,17 @@ install_ohmyzsh() {
     return 0
   fi
 
-  # Install curl if not present
   if ! command -v curl &>/dev/null; then
     echo "Installing curl for Oh My Zsh installation..."
     sudo dnf install -y curl
   fi
 
-  # Download and install Oh My Zsh
   sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
   echo "Oh My Zsh installation complete!"
-  
-  # Copy custom .zshrc configuration
+
   copy_custom_zshrc
-  
-  # Install Oh My Zsh plugins
+
   install_zsh_plugins
 }
 
