@@ -53,7 +53,7 @@ config.color_scheme = "ayu"
 config.font = wezterm.font("JetBrains Mono")
 config.font_size = 12
 
-config.window_decorations = "RESIZE"
+config.window_decorations = "NONE"
 
 -- tmux
 config.leader = { key = "b", mods = "CTRL", timeout_milliseconds = 2000 }
