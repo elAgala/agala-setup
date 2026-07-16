@@ -27,8 +27,11 @@ source "$SCRIPT_DIR/modules/zsh.sh"
 echo "Installing Neovim..."
 source "$SCRIPT_DIR/modules/nvim.sh"
 
-echo "Installing WezTerm..."
-source "$SCRIPT_DIR/modules/wezterm.sh"
+echo "Installing Kitty..."
+source "$SCRIPT_DIR/modules/kitty.sh"
+
+echo "Installing tmux..."
+source "$SCRIPT_DIR/modules/tmux.sh"
 
 echo "Installing nvm..."
 source "$SCRIPT_DIR/modules/nvm.sh"
